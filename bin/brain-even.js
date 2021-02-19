@@ -22,7 +22,7 @@ const answer = () => {
     return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`
   }
 }
-
+const count = 0
 const winOrNo = (answer, count) => {
   const str = answer()
   count += 1
