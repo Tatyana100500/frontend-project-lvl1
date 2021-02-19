@@ -4,6 +4,10 @@
   "description": "[![Actions Status](https://github.com/Tatyana100500/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Tatyana100500/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
