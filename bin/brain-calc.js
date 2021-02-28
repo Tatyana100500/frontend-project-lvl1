@@ -12,14 +12,18 @@ const answer = () => {
   const num2 = getRandomInt(30)
   const num3 = getRandomInt(3)
   let sign = ''
+  let correctAnswer = 0
   if (num3 === 1) {
     sign = '+'
+    correctAnswer = num1 + num2
   } else if (num3 === 2) {
     sign = '-'
-  } else  {
+    correctAnswer = num1 - num2
+  } else {
     sign = '*'
+    correctAnswer = num1 * num2
   }
-  const correctAnswer = eval((num1 + sign + num2)) 
+  console.log(correctAnswer)
   const a = readlineSync.question(`Question: ${num1} ${sign} ${num2} `)
   if (a === correctAnswer.toString()) {
     return 'Correct!'
