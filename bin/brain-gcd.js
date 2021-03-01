@@ -11,8 +11,7 @@ Math.gcd = function () {
   if (arguments.length === 2) {
     if (arguments[1] === 0) {
       return arguments[0]
-    }
-    else {
+    } else {
       return Math.gcd(arguments[1], arguments[0] % arguments[1])
     }
   } else if (arguments.length > 2) {
