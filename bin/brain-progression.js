@@ -8,7 +8,7 @@ const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max))
 }
 const answer = () => {
-  const num1 = getRandomInt(10)
+  let num1 = getRandomInt(10)
   const num2 = getRandomInt(50)
   let num3 = getRandomInt(10)
   if (num3 === 0) {
@@ -20,7 +20,7 @@ const answer = () => {
   console.log(num3)
   const arr = []
   let x = num2
-  for (let i = 0; i < 10; i +=1) {
+  for (let i = 0; i < 10; i += 1) {
     x += num1
     arr.push(x)
   }
