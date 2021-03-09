@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync'
 
 console.log('Welcome to the Brain Games!')
@@ -38,4 +39,4 @@ Let's try again, ${name}!`
   }
 }
 console.log(winOrNo(answer, count))
-export default winOrNo
+//export default winOrNo
