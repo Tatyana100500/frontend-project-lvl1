@@ -16,11 +16,11 @@ Math.gcd = function () {
   } else if (arguments.length > 2) {
     let result = Math.gcd(arguments[0], arguments[1])
     for (let i = 2; i < arguments.length; i++) {
-      result = Math.gcd(result, arguments[i])
+      result = Math.gcd(result, arguments[i]);
     }
-    return result
+    return result;
   }
-}
+};
 const answer = () => {
   const num1 = getRandomInt(100);
   const num2 = getRandomInt(100);
@@ -30,8 +30,7 @@ const answer = () => {
     return 'Correct!';
   }
   return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
-}
-let count = 0;
+};
 const winOrNo = (answerFunc, counter) => {
   const str = answerFunc();
   counter += 1;
@@ -44,4 +43,4 @@ Let's try again, ${name}!`;
   }
   return winOrNo(answerFunc, counter);
 };
-console.log(winOrNo(answer, count));
+console.log(winOrNo(answer, 0));
