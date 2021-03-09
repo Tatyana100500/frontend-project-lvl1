@@ -1,13 +1,11 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync'
+import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!')
-const name = readlineSync.question('May I have your name?  ')
-console.log(`Hello, ${name}!`)
-console.log('Find the greatest common divisor of given numbers.')
-const getRandomInt = (max) => {
-  return Math.floor(Math.random() * Math.floor(max))
-}
+console.log('Welcome to the Brain Games!');
+const name = readlineSync.question('May I have your name?  ');
+console.log(`Hello, ${name}!`);
+console.log('Find the greatest common divisor of given numbers.');
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 Math.gcd = function () {
   if (arguments.length === 2) {
     if (arguments[1] === 0) {
@@ -24,30 +22,26 @@ Math.gcd = function () {
   }
 }
 const answer = () => {
-  const num1 = getRandomInt(100)
-  const num2 = getRandomInt(100)
-  const correctAnswer = Math.gcd(num1, num2)
-  const a = readlineSync.question(`Question: ${num1} ${num2} `)
+  const num1 = getRandomInt(100);
+  const num2 = getRandomInt(100);
+  const correctAnswer = Math.gcd(num1, num2);
+  const a = readlineSync.question(`Question: ${num1} ${num2} `);
   if (a === correctAnswer.toString()) {
-    return 'Correct!'
-  } else {
-    return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`
+    return 'Correct!';
   }
+  return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
 }
-const count = 0
-const winOrNo = (answer, count) => {
-  const str = answer()
-  count += 1
+let count = 0;
+const winOrNo = (answerFunc, counter) => {
+  const str = answerFunc();
+  counter += 1;
   if (str !== 'Correct!') {
     return `${str} 
-Let's try again, ${name}!`
-  } else {
-    if (count === 3) {
-      return `Congratulations, ${name}!`
-    } else {
-      return winOrNo(answer, count)
-    }
+Let's try again, ${name}!`;
   }
-}
-console.log(winOrNo(answer, count))
-export default winOrNo
+  if (counter === 3) {
+    return `Congratulations, ${name}!`;
+  }
+  return winOrNo(answerFunc, counter);
+};
+console.log(winOrNo(answer, count));
