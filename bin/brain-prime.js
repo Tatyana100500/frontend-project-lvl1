@@ -35,6 +35,6 @@ Let's try again, ${name}!`;
     return `Congratulations, ${name}!`;
   }
   console.log(str);
-  return winOrNo(answer, count);
+  return winOrNo(answerFunc, counter);
 };
 console.log(winOrNo(answer, count));
