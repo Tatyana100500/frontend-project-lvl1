@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import sayHello from '../src/cli.js'
 import brainPrime from './brain-prime.js'
 import brainCalc from './brain-calc.js'
