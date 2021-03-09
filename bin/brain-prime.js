@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const arrPrime = [2, 3, 5, 7, 11, 13, 17, 
-19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+const arrPrime = [2, 3, 5, 7, 11, 13, 17,
+  19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 
 console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
