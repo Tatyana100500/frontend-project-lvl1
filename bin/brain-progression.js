@@ -18,7 +18,6 @@ const answer = () => {
   if (num1 === 0) {
     num1 = 1
   }
-  console.log(num3)
   const arr = []
   let x = num2
   for (let i = 0; i < 10; i += 1) {
@@ -28,7 +27,6 @@ const answer = () => {
   const correctAnswer = arr[num3 - 1]
   arr[num3 - 1] = ' . . '
   const str = arr.join(' ')
-  console.log(correctAnswer)
   const a = readlineSync.question(`Question: ${str} `)
   if (a === correctAnswer.toString()) {
     return 'Correct!'
