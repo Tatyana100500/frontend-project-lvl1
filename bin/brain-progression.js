@@ -24,8 +24,8 @@ const answer = () => {
     x += num1
     arr.push(x)
   }
-  const correctAnswer = arr[num3 - 1]
-  arr[num3 - 1] = ' . . '
+  const correctAnswer = arr[num3]
+  arr[num3] = ' . . '
   const str = arr.join(' ')
   const a = readlineSync.question(`Question: ${str} `)
   if (a === correctAnswer.toString()) {
