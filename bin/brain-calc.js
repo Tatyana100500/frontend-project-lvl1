@@ -13,12 +13,13 @@ const answer = () => {
   let sign = '';
   let correctAnswer = 0;
   if (num3 === 1) {
-    sign = '+'
+    sign = '+';
     correctAnswer = num1 + num2;
-    sign = '-'
+  } else if (num3 === 2) {
+    sign = '-';
     correctAnswer = num1 - num2;
   } else {
-    sign = '*'
+    sign = '*';
     correctAnswer = num1 * num2;
   };
   console.log(correctAnswer);
