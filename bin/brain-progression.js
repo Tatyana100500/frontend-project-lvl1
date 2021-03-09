@@ -33,6 +33,7 @@ const answer = () => {
 };
 const winOrNo = (answerFunc, counter) => {
   const str = answerFunc();
+  counter += 1;
   if (str !== 'Correct!') {
     return `${str} 
 Let's try again, ${name}!`;
@@ -40,6 +41,6 @@ Let's try again, ${name}!`;
   if (counter === 3) {
     return `Congratulations, ${name}!`;
   }
-  return winOrNo(answerFunc, counter + 1);
+  return winOrNo(answerFunc, counter);
 };
 console.log(winOrNo(answer, 0));
