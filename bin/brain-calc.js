@@ -21,28 +21,26 @@ const answer = () => {
   } else {
     sign = '*';
     correctAnswer = num1 * num2;
-  };
+  }
   console.log(correctAnswer);
   const a = readlineSync.question(`Question: ${num1} ${sign} ${num2} `);
   if (a === correctAnswer.toString()) {
     return 'Correct!';
-  } else {
-    return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
   }
-}
+  return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
+};
 const count = 0;
-const winOrNo = (answer, count) => {
-  const str = answer();
-  count += 1;
+const winOrNo = (answerFunc, counter) => {
+  const str = answerFunc();
+  counter += 1;
   if (str !== 'Correct!') {
     return `${str} 
 Let's try again, ${name}!`;
   } else {
-    if (count === 3) {
+    if (counter === 3) {
       return `Congratulations, ${name}!`;
-    } else {
-      return winOrNo(answer, count);
     }
+    return winOrNo(answerFunc, counter);
   }
 };
 console.log(winOrNo(answer, count));
