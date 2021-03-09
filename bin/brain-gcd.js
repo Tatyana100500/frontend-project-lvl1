@@ -25,12 +25,9 @@ Math.gcd = function () {
 }
 const answer = () => {
   const num1 = getRandomInt(100)
-  console.log(num1)
   const num2 = getRandomInt(100)
-  console.log(num2)
   const correctAnswer = Math.gcd(num1, num2)
-  console.log(correctAnswer)
-  const a = readlineSync.question(`Question: ${num1}  ${num2} `)
+  const a = readlineSync.question(`Question: ${num1} ${num2} `)
   if (a === correctAnswer.toString()) {
     return 'Correct!'
   } else {
