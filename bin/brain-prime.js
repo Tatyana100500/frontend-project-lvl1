@@ -42,3 +42,4 @@ Let's try again, ${name}!`
   }
 }
 console.log(winOrNo(answer, count))
+export default winOrNo
