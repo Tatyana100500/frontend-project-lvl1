@@ -6,22 +6,7 @@ const name = readlineSync.question('May I have your name?  ');
 console.log(`Hello, ${name}!`);
 console.log('Find the greatest common divisor of given numbers.');
 const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
-const gcd = (n1, n2) => {
-  const arguments = [n1, n2];
-  if (arguments.length === 2) {
-    if (arguments[1] === 0) {
-      return arguments[0];
-    } else {
-      return gcd(arguments[1], arguments[0] % arguments[1]);
-    }
-  } else if (arguments.length > 2) {
-    let result = gcd(arguments[0], arguments[1]);
-    for (let i = 2; i < arguments.length; i++) {
-      result = gcd(result, arguments[i]);
-    }
-    return result;
-  }
-};
+const gcd = (n, i = 2) => n % i === 0 ? i : i > Math.sqrt(n) ? 1 : gcd(n, i + 1);
 const answer = () => {
   const num1 = getRandomInt(100);
   const num2 = getRandomInt(100);
