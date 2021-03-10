@@ -31,6 +31,7 @@ const answer = () => {
   }
   return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
 };
+let count = 0;
 const winOrNo = (answerFunc, counter) => {
   const str = answerFunc();
   counter += 1;
@@ -43,4 +44,4 @@ Let's try again, ${name}!`;
   }
   return winOrNo(answerFunc, counter);
 };
-console.log(winOrNo(answer, 0));
+console.log(winOrNo(answer, count));
