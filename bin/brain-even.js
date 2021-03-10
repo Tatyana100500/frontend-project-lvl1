@@ -20,6 +20,7 @@ const answer = () => {
   }
   return `${a} is wrong answer ;(. Correct answer was ${correctAnswer}.`;
 };
+let counter = 0;
 const winOrNo = (answerFunc) => {
   const str = answerFunc();
   counter += 1;
