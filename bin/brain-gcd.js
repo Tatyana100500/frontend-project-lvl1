@@ -24,7 +24,7 @@ const gcd = (...arguments) => {
 const answer = () => {
   const num1 = getRandomInt(100);
   const num2 = getRandomInt(100);
-  const correctAnswer = Math.gcd(num1, num2);
+  const correctAnswer = gcd(num1, num2);
   const a = readlineSync.question(`Question: ${num1} ${num2} `);
   if (a === correctAnswer.toString()) {
     return 'Correct!';
